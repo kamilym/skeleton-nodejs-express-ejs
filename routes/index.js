@@ -4,7 +4,7 @@ const Autor = require("../models/autor")
 
 /* GET home page. */
 
-router.get('/',async function(req, res, next) {
+router.post('/',async function(req, res, next) {
   const autores = await Autor.selecionar();
   res.json(autores.rows)
 });
